@@ -13,7 +13,7 @@ function PokemonBio() {
     setTimeout(() =>
       setAnimate(true)
 
-      , 100);
+      , 1000);
 
 
   }, [id])
