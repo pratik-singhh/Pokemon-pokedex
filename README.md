@@ -1,16 +1,134 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Pokédex React App
 
-Currently, two official plugins are available:
+A modern Pokédex web application built with **React**, **React Router**, and the **PokéAPI**.
+Users can browse Pokémon, search by name, and view detailed stats with animated stat bars.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+* 🔍 **Search Pokémon** by name
+* 📖 **Detailed Pokémon page** with stats and types
+* 📊 **Animated stat bars**
+* ⏭ **Previous / Next Pokémon navigation**
+* 🎨 **Type color badges**
+* ⚡ **Fast API fetching** using PokéAPI
+* 📱 **Responsive grid layout**
+* 🧭 **Client-side routing** with React Router
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+* **React**
+* **React Router**
+* **TailwindCSS**
+* **PokéAPI**
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/pratik-singhh/pokedex-react.git
+```
+
+Go into the project folder:
+
+```bash
+cd pokedex-react
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+The app will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🌐 API Used
+
+This project uses:
+
+**PokéAPI**
+https://pokeapi.co/
+
+PokéAPI provides Pokémon data including stats, types, sprites, and artwork.
+
+---
+
+## 📁 Project Structure
+
+```
+src
+ ├─ components
+ │   ├─ PokemonCard.jsx
+ │   ├─ PokemonBio.jsx
+ │   └─ Homepage.jsx
+ │
+ ├─ services
+ │   └─ APIstuff.js
+ │
+ ├─ assets
+ │   └─ Bg.png
+ │
+ ├─ App.jsx
+ └─ main.jsx
+```
+
+---
+
+## 🧠 What I Learned
+
+While building this project I practiced:
+
+* Fetching and handling API data in React
+* Using React Router for page navigation
+* Managing component state with hooks
+* Building reusable components
+* Creating responsive layouts with TailwindCSS
+* Implementing simple UI animations
+
+---
+
+## 🔗 Live Demo
+
+You can view the live project here:
+
+```
+https://your-project-name.vercel.app
+```
+
+---
+
+## 📌 Future Improvements
+
+Planned upgrades for the project:
+
+* Pokémon type-based background themes
+* Improved UI styling and layout
+* Card hover animations
+* Loading skeletons
+* Pagination or infinite scrolling
+
+---
+
+## 📜 License
+
+This project is open source and available under the MIT License.
