@@ -13,7 +13,7 @@ function PokemonCard({ name, url }) {
       <Link to={`/pokemon/${pokeId}`}>
         <div className=" hover:shadow-lg shadow-blue-400 cursor-pointer hover:scale-105 ease-in transform-gpu transition-all m-3 p-3 border-2 rounded-lg justify-center items-center flex flex-col">
           <img className=" h-24 object-contain" src={pokeArtUrl} alt={name} />
-          <h1>{name}</h1>
+          <h1 className="text-black">{name}</h1>
 
         </div>
       </Link>

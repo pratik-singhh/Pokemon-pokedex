@@ -30,12 +30,12 @@ function Homepage() {
   return (
     <>
 
-      <div>
+      <div className='bg-gray-600'>
 
 
         <div className='text-center justify-center flex'>
 
-          <input onChange={(e) => { setSearchTerm(e.target.value) }} className=' max-w-md p-2 rounded-xl border m-4' value={searchTerm} placeholder='Search Pokemon' type="text" />
+          <input onChange={(e) => { setSearchTerm(e.target.value) }} className=' max-w-md p-2 rounded-xl border-2 m-4' value={searchTerm} placeholder='Search Pokemon' type="text" />
 
         </div>
         {(loading === true) && (<h1 className='text-3xl text-fuchsia-400'>Loading ...</h1>)}
