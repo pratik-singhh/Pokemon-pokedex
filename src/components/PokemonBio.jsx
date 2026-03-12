@@ -122,11 +122,11 @@ function PokemonBio() {
             {(idNo > 1) &&
               <Link to={`/pokemon/${prevId}`}>
 
-                <h1>Previous Pokemon</h1>
+                <h1>⟵Previous Pokemon</h1>
               </Link>
             }
             <Link to={`/pokemon/${nextId}`}>
-              <h1>Next Pokemon</h1>
+              <h1>Next Pokemon⟶</h1>
 
             </Link>
           </div>

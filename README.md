@@ -112,7 +112,7 @@ While building this project I practiced:
 You can view the live project here:
 
 ```
-https://your-project-name.vercel.app
+https://pokedex-mu-fawn.vercel.app
 ```
 
 ---
