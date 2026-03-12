@@ -16,11 +16,18 @@ function PokemonBio() {
       const pokeBioData = await pokeBioDataRaw.json();
       setPokemonBio(pokeBioData);
 
+
       console.log(pokeBioData);
+      console.log(pokeBioData.stats);
+
     }
     bioFetch();
 
   }, [id])
+
+  if (pokemonBio === null) {
+    return "Loading";
+  }
 
   return (
     <>
@@ -31,39 +38,38 @@ function PokemonBio() {
 
       </Link>
 
-      {(pokemonBio === null) && (
-        <h1>Loading ...</h1>
-      )}
 
-      {(pokemonBio !== null) && (
-        <div className="flex items-center flex-col justify-center text-center">
-          <img className="object-contain h-32" src={pokemonBio.sprites.other["official-artwork"].front_default} alt="" />
+      <div className="flex items-center flex-col justify-center text-center">
+        <img className="object-contain h-32" src={pokemonBio.sprites.other["official-artwork"].front_default} alt="" />
 
-          <h1>{pokemonBio.name.charAt(0).toUpperCase() + pokemonBio.name.slice(1)}</h1>
+        <h1>{pokemonBio.name.charAt(0).toUpperCase() + pokemonBio.name.slice(1)}</h1>
 
-          {pokemonBio.types.map((element, index) =>
-            (<h1 key={index}>{element.type.name}</h1>)
-          )}
+        {pokemonBio.types.map((element, index) =>
+          (<h1 key={index}>{element.type.name}</h1>)
+        )}
+
+        {pokemonBio.stats.map((stat, index) => (
+          <h1 key={stat.stat.name}>{stat.stat.name}: {stat.base_stat}</h1>
+        ))}
 
 
-          <div className="flex gap-24 mt-10">
+        <div className="flex gap-24 mt-10">
 
-            {(idNo > 1) &&
-              <Link to={`/pokemon/${prevId}`}>
+          {(idNo > 1) &&
+            <Link to={`/pokemon/${prevId}`}>
 
-                <h1>Previous Pokemon</h1>
-              </Link>
-            }
-            <Link to={`/pokemon/${nextId}`}>
-              <h1>Next Pokemon</h1>
-
+              <h1>Previous Pokemon</h1>
             </Link>
-          </div>
+          }
+          <Link to={`/pokemon/${nextId}`}>
+            <h1>Next Pokemon</h1>
+
+          </Link>
         </div>
+      </div>
 
 
 
-      )}
     </>
   )
 }
